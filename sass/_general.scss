@@ -1,0 +1,24 @@
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+$light-gray: hsl(0, 0%, 98%);
+$desktop: 992px;
+
+/* Google Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* General Style*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/bg-mobile.svg) fixed, $violet;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 2rem 2rem 3rem 3rem;
+}

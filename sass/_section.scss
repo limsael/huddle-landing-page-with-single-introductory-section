@@ -1,0 +1,119 @@
+/* Style by order */
+.section {
+  display: grid;
+  gap: 2rem;
+
+  &__header-img {
+    width: 100px;
+    margin-block-end: 2.5rem;
+  }
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__content-img {
+    width: 100%;
+  }
+
+  &__content-right {
+    text-align: center;
+  }
+
+  &__content-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $light-gray;
+    margin-block-end: 0.9rem;
+  }
+
+  &__content-text {
+    font-size: 1rem;
+    color: $light-gray;
+    margin-block-end: 0.9rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    background-color: $light-gray;
+    display: inline-block;
+    margin-block: 0.9rem;
+    text-decoration: none;
+    color: $soft-magenta;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: $soft-magenta;
+      color: $light-gray;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__socials-link {
+    i {
+      display: inline-block;
+      color: $light-gray;
+      margin-inline: 0.5rem;
+      font-size: 1.5rem;
+      border: 1px solid $light-gray;
+      padding: 0.8rem;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      transition: color 0.3s ease, border-color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: $soft-magenta;
+        border-color: $soft-magenta;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  body {
+    background: url(../images/bg-desktop.svg) fixed, $violet;
+    background-repeat: no-repeat;
+    padding-inline: 4rem;
+  }
+
+  .section {
+    &__header-img {
+      width: auto;
+      margin-block-end: 1.5rem;
+    }
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    &__content-img {
+      width: 100%;
+    }
+
+    &__content-right {
+      text-align: left;
+    }
+
+    &__content-title {
+      font-size: 2rem;
+      margin-block-end: 1.5rem;
+    }
+
+    &__content-text {
+      opacity: 0.8;
+    }
+
+    &__socials {
+      justify-content: flex-end;
+    }
+  }
+}
